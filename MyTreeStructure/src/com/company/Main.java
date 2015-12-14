@@ -47,37 +47,6 @@ public class Main {
             emptyTreeExeption.printStackTrace();
         }
 
-      /*  StringBuilder text = new StringBuilder();
-        Scanner sc = new Scanner(System.in);
-        String temp;
-        while (sc.hasNext()) {
-            temp = sc.nextLine();
-         //   if (!temp.contains("^")) {
-             //   if (temp.contains("/")) {
-                    if (temp.contains(" add")) {
-                        int index = temp.indexOf(" add");
-                        String keyway = temp.substring(0, index - 1);
-                        try {
-                            tree.addEntity(keyway ,"value");
-                        } catch (NoSuchKeyExeption noSuchKeyExeption) {
-                            noSuchKeyExeption.printStackTrace();
-                        }
 
-
-                    } else if (temp.contains(" dell")) {
-                        int index = temp.indexOf(" dell");
-                        String keyway = temp.substring(0, index - 1);
-                        try {
-                            tree.deleteEntity(keyway);
-                        } catch (NoSuchKeyExeption noSuchKeyExeption) {
-                            noSuchKeyExeption.printStackTrace();
-                        }
-                  }
-             //   }
-            }
-        //    else {
-        //        System.out.println("root:");
-      //      }
-     //   }*/
    }
 }

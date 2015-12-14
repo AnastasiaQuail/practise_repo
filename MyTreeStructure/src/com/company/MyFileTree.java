@@ -125,7 +125,14 @@ public class MyFileTree<T2> {
 
     }
 
-private static Entity<T2> iterate(Entity<T2> entity,Function<T2,T2> func){
+private  void iterate(Entity<T2> entity,Function<T2,T2> function){
+    entity.applayFunction(function);
+    ArrayList<Entity<T2>> list = entity.getChildren();
+    if(list.size()==0)
+        return ;
+    for (Entity<T2> t2Entity : list) {
+        iterate(t2Entity,function);
+    }
 
 }
 
@@ -135,10 +142,35 @@ private static Entity<T2> iterate(Entity<T2> entity,Function<T2,T2> func){
         if (list.size() == 0)
             throw new EmptyTreeExeption();
         for (Entity<T2> t2Entity : list) {
-            t2Entity.applayFunction(function);
-            list = t2Entity.getChildren();
+            iterate(t2Entity,function);
         }
-
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
